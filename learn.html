@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<head>
+  <script src="d3/d3.js"></script>
+</head>
+ 
+<body>
+	<div id="chart" class="chart"></div>
+  <script>
+    d3.text("example.xml").then(function(text) {
+   		var parser = new DOMParser();
+  		doc = parser.parseFromString(text,"application/xml");
+
+  	  data = [].map.call(doc.querySelectorAll("bird"), function(get_data) {
+        var scientific_name
+        var reasoning = '';
+        var common_name;
+        var mordern_authority;
+
+        //TODO: Accept mutiple names?
+        if(get_data.querySelector("scientific-name") != null)
+          scientific_name = get_data.querySelector("scientific-name").textContent;
+        if(get_data.querySelector("common-name") != null)
+          common_name = get_data.querySelector("common-name").textContent;
+        if(get_data.querySelector("modern-authority") != null)
+          mordern_authority = get_data.querySelector("modern-authority").textContent;
+
+        var reason = get_data.querySelectorAll("reasoning");
+        if(reason != null){
+          reason.forEach(function(dataset){
+            if(dataset.getAttribute("comment") != null)
+              reasoning += dataset.getAttribute("comment");
+            else 
+              reasoning += dataset.textContent.replace(/\s+/g,' ');
+
+            //TODO: Add authorities
+            // var mAuth, aAuth;
+            // mAuth = dataset.querySelectorAll("modern-authority");
+            // if(mAuth != null) {
+            //   mAuth.forEach(function(obj){
+
+            //   });
+            // }
+          });
+        }
+        return {
+           scientific_name: scientific_name,
+           common_name:common_name,
+           mordern_authority: mordern_authority,
+           reasoning: reasoning
+         };
+      });
+      console.log(data);
+    });
+
+  	
+  </script>
+</body>
+</html>

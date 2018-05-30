@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data>
+	   <bird>
+      <scientific-name>Larus marinus</scientific-name>, the <common-name>Black-backed Gull</common-name>,
+      <modern-authority>Sundevall</modern-authority>,
+      <reasoning comment="rare in Greece"/> or
+    </bird>
+
+    <bird>
+      <scientific-name>L. argentatus</scientific-name>, the <common-name>Herring Gull</common-name>
+      <modern-authority>Krüper</modern-authority>, the former being rare in Greece.
+      <reasoning comment="abundant during the winter and breeds about the middle of April"/>
+    </bird>
+
+    <bird>
+      <modern-authority>Netolicka</modern-authority>'s hypothesis of the
+      <scientific-name>Merganser</scientific-name>
+      <reasoning>
+        Do not tally with
+        <ancient-authority>
+          Aristotle
+          <citation normalized-ref="Aristotle, Historia Animalium 5. 9, 542b"/>
+        </ancient-authority>
+      </reasoning>
+    </bird>
+
+    and that of
+    <!-- Should we put Diver and Grebe together? or insert Groshan in Grebe -->
+    <bird>
+      <modern-authority>Groshans</modern-authority> that it was a
+      <common-name>Diver</common-name> or
+      <reasoning comment="do not tally with Aristotle">
+        <ancient-authority>
+          <citation normalized-ref="Aristotle, Historia Animalium 5. 9, 542b"/>
+        </ancient-authority>
+      </reasoning>
+    </bird>
+
+    <bird>
+      <common-name>Grebe</common-name>,
+      <reasoning>
+        do not tally with
+        <ancient-authority>
+          Aristotle
+          <citation normalized-ref="Aristotle, Historia Animalium 5. 9, 542b"/>
+        </ancient-authority>
+      </reasoning>
+    </bird>
+
+</data>
